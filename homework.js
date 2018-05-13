@@ -15,3 +15,9 @@ class Fighter {
     enemy.setDamage(damage);
   }
 }
+
+class ImprovedFighter extends Fighter {
+  constructor(name = 'Orion', power = 1, health = 100) {
+    super(name, power, health);
+  }
+}
