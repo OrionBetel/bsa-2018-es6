@@ -27,3 +27,16 @@ class ImprovedFighter extends Fighter {
     super.hit(enemy, point * 2);
   }
 }
+
+function fight(fighter, improvedFighter, ...points) {
+  for (let i = 0; i < points.length; i += 1) {
+    if (fighter.health > 0 && improvedFighter.health > 0) {
+      fighter.hit(improvedFighter, points[i]);
+      improvedFighter.doubleHit(fighter, points[i]);
+    } else {
+      break;
+    }
+  }
+
+  console.log(`${getWinner(fighter, improvedFighter) || 'Friendship'} wins!`);
+}
