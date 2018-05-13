@@ -20,4 +20,8 @@ class ImprovedFighter extends Fighter {
   constructor(name = 'Orion', power = 1, health = 100) {
     super(name, power, health);
   }
+
+  doubleHit(enemy, point) {
+    super.hit(enemy, point * 2);
+  }
 }
