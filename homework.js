@@ -29,6 +29,18 @@ class ImprovedFighter extends Fighter {
 }
 
 function fight(fighter, improvedFighter, ...points) {
+  const getWinner = (fighterOne, fighterTwo) => {
+    if (fighterOne.health < 1) {
+      return fighterTwo.name;
+    }
+
+    if (fighterTwo.health < 1) {
+      return fighterOne.name;
+    }
+
+    return null;
+  };
+  
   for (let i = 0; i < points.length; i += 1) {
     if (fighter.health > 0 && improvedFighter.health > 0) {
       fighter.hit(improvedFighter, points[i]);
