@@ -4,4 +4,9 @@ class Fighter {
     this.power = power;
     this.health = health;
   }
+
+  setDamage(damage) {
+    this.health -= damage;
+    console.log(`${this.name}'s health: ${this.health}`);
+  }
 }
