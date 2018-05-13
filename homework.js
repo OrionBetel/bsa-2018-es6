@@ -9,4 +9,9 @@ class Fighter {
     this.health -= damage;
     console.log(`${this.name}'s health: ${this.health}`);
   }
+
+  hit(enemy, point) {
+    const damage = this.power * point;
+    enemy.setDamage(damage);
+  }
 }
