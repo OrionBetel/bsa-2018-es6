@@ -7,7 +7,9 @@ class Fighter {
 
   setDamage(damage) {
     this.health -= damage;
-    console.log(`${this.name}'s health: ${this.health}`);
+    const healthMessage = (this.health > 0) ? (`${this.name}'s health: ${this.health}`) :
+      (`${this.name} is dead (RIP)`);
+    console.log(healthMessage);
   }
 
   hit(enemy, point) {
