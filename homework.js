@@ -52,3 +52,18 @@ function fight(fighter, improvedFighter, ...points) {
 
   console.log(`${getWinner(fighter, improvedFighter) || 'Friendship'} wins!`);
 }
+
+const fighter = new Fighter();
+const improvedFighter = new ImprovedFighter();
+
+fight(fighter, improvedFighter, 25, 13, 45); // Sub-Zero wins
+
+const sonya = new Fighter('Sonya', 10, 1000);
+const liuKang = new ImprovedFighter('Liu Kang');
+
+fight(sonya, liuKang, 25, 13, 45); // Sonya wins
+
+const scorpion = new Fighter('Scorpion');
+const kano = new ImprovedFighter('Kano');
+
+fight(scorpion, kano, 5); // Friendship wins
